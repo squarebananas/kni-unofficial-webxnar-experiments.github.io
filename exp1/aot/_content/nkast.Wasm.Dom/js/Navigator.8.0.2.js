@@ -54,6 +54,9 @@
         //enterXrBtn.addEventListener("pointerenter", () => { enterXrBtn.innerHTML = '<BR>Click here to enter VR (maybe?)'; });
         //enterXrBtn.addEventListener("pointerleave", () => { enterXrBtn.innerHTML = '<BR>Click here to enter VR'; });
         //enterXrBtn.addEventListener("pointerclick", () => { nv.xr.requestSession('immersive-vr').then(nkNavigator.GetOnSessionStarted); });
+        enterXrBtn.addEventListener("click", () => { enterXrBtn.innerHTML += "lC"; });
+        enterXrBtn.addEventListener("dblclick", () => { enterXrBtn.innerHTML += "lD"; });
+        enterXrBtn.addEventListener("auxclick", () => { enterXrBtn.innerHTML += "lA"; });
         enterXrBtn.onclick = function () {
             enterXrBtn.innerHTML += ".";
             //nv.xr.requestSession('immersive-vr')
