@@ -6,7 +6,6 @@
     glContext2: null,
     xrCombinedFrameData: [],
 
-
     GetUserAgent: function (uid)
     {
         var nv = nkJSObject.GetObject(uid);
@@ -46,21 +45,36 @@
     },
     GetIsSessionSupported: function GetIsSessionSupported(uid) {
         var nv = nkJSObject.GetObject(uid);
-        var iss = nv.xr.isSessionSupported('immersive-vr');
+        //iss = nv.xr.isSessionSupported('immersive-vr');
+        //nv.xr.isSessionSupported('immersive-vr').then(() => { });
 
         var enterXrBtn = window.document.createElement('xrButton');
         enterXrBtn.style.position = 'fixed';
         enterXrBtn.innerHTML = '<BR>Click here to enter VR';
-        enterXrBtn.addEventListener("pointerenter", () => { enterXrBtn.innerHTML = '<BR>Click here to enter VR (maybe?)'; });
-        enterXrBtn.addEventListener("pointerleave", () => { enterXrBtn.innerHTML = '<BR>Click here to enter VR'; });
-        //enterXrBtn.addEventListener("pointerclick", () => { nv.xr.requestSession('immersive-vr').then(this.GetOnSessionStarted); });
+        //enterXrBtn.addEventListener("pointerenter", () => { enterXrBtn.innerHTML = '<BR>Click here to enter VR (maybe?)'; });
+        //enterXrBtn.addEventListener("pointerleave", () => { enterXrBtn.innerHTML = '<BR>Click here to enter VR'; });
+        //enterXrBtn.addEventListener("pointerclick", () => { nv.xr.requestSession('immersive-vr').then(nkNavigator.GetOnSessionStarted); });
+        enterXrBtn.onclick = function () {
+            nv.xr.requestSession('immersive-vr')
+                .then(nkNavigator.GetOnSessionStarted)
+                .catch(err => { enterXrBtn.innerHTML += "<BR>" + err; });
+        };
         document.body.append(enterXrBtn);
-        document.body.style.fontSize = '5em';
-        document.body.addEventListener("click", () => {
-            var rs = nv.xr.requestSession('immersive-vr').then(this.GetOnSessionStarted);
-        });
+        //enterXrBtn.onclick = function () {
 
-        return BINDING.js_to_mono_obj(iss);
+        //    var promise1 = new Promise((resolve, reject) => {
+        //        nv.xr.requestSession('immersive-vr').then(nkNavigator.GetOnSessionStarted).catch(err);
+        //    });
+
+        //    promise1.catch((error) => {
+        //        enterXrBtn.innerHTML += "<BR>" + error;
+        //    });
+        //};
+        document.body.style.fontSize = '3em';
+        //document.body.addEventListener("click", () => {
+        //    var rs = nv.xr.requestSession('immersive-vr').then(nkNavigator.GetOnSessionStarted);
+        //});
+        //return BINDING.js_to_mono_obj(iss);
     },
     GetOnSessionStarted: function OnSessionStarted(session) {
         nkNavigator.xrSession = session;
