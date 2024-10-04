@@ -74,43 +74,43 @@
                 event.key.charCodeAt(0), event.keyCode, event.location);
         };
 
-        window.addEventListener('touchstart', (event) =>
-        {
-            event.preventDefault();
-            for (var i = 0; i < event.changedTouches.length; i++)
-            {
-                var touch = event.changedTouches[i];
-                DotNet.invokeMethod('nkast.Wasm.Dom', 'JsWindowOnTouchStart', uid,
-                    touch.clientX, touch.clientY, touch.identifier);
-            }
-        });
+        //window.addEventListener('touchstart', (event) =>
+        //{
+        //    event.preventDefault();
+        //    for (var i = 0; i < event.changedTouches.length; i++)
+        //    {
+        //        var touch = event.changedTouches[i];
+        //        DotNet.invokeMethod('nkast.Wasm.Dom', 'JsWindowOnTouchStart', uid,
+        //            touch.clientX, touch.clientY, touch.identifier);
+        //    }
+        //});
 
-        window.addEventListener('touchmove', (event) =>
-        {
-            event.preventDefault();
-            for (var i = 0; i < event.changedTouches.length; i++)
-            {
-                var touch = event.changedTouches[i];
-                DotNet.invokeMethod('nkast.Wasm.Dom', 'JsWindowOnTouchMove', uid,
-                    touch.clientX, touch.clientY, touch.identifier);
-            }
-        });
+        //window.addEventListener('touchmove', (event) =>
+        //{
+        //    event.preventDefault();
+        //    for (var i = 0; i < event.changedTouches.length; i++)
+        //    {
+        //        var touch = event.changedTouches[i];
+        //        DotNet.invokeMethod('nkast.Wasm.Dom', 'JsWindowOnTouchMove', uid,
+        //            touch.clientX, touch.clientY, touch.identifier);
+        //    }
+        //});
 
-        window.addEventListener('touchend', (event) =>
-        {
-            event.preventDefault();
-            for (var i = 0; i < event.changedTouches.length; i++)
-            {
-                var touch = event.changedTouches[i];
-                DotNet.invokeMethod('nkast.Wasm.Dom', 'JsWindowOnTouchEnd', uid,
-                    touch.clientX, touch.clientY, touch.identifier);
-            }
-        });
+        //window.addEventListener('touchend', (event) =>
+        //{
+        //    event.preventDefault();
+        //    for (var i = 0; i < event.changedTouches.length; i++)
+        //    {
+        //        var touch = event.changedTouches[i];
+        //        DotNet.invokeMethod('nkast.Wasm.Dom', 'JsWindowOnTouchEnd', uid,
+        //            touch.clientX, touch.clientY, touch.identifier);
+        //    }
+        //});
 
-        window.addEventListener('touchcancel', (event) =>
-        {
-            DotNet.invokeMethod('nkast.Wasm.Dom', 'JsWindowOnTouchCancel', uid);
-        });
+        //window.addEventListener('touchcancel', (event) =>
+        //{
+        //    DotNet.invokeMethod('nkast.Wasm.Dom', 'JsWindowOnTouchCancel', uid);
+        //});
 
         window.addEventListener("gamepadconnected", (event) =>
         {

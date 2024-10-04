@@ -51,15 +51,22 @@
         var enterXrBtn = window.document.createElement('xrButton');
         enterXrBtn.style.position = 'fixed';
         enterXrBtn.innerHTML = '<BR>Click here to enter VR';
-        //enterXrBtn.addEventListener("pointerenter", () => { enterXrBtn.innerHTML = '<BR>Click here to enter VR (maybe?)'; });
-        //enterXrBtn.addEventListener("pointerleave", () => { enterXrBtn.innerHTML = '<BR>Click here to enter VR'; });
-        //enterXrBtn.addEventListener("pointerclick", () => { nv.xr.requestSession('immersive-vr').then(nkNavigator.GetOnSessionStarted); });
-        enterXrBtn.onclick = function () {
-            enterXrBtn.innerHTML += ".";
-            //nv.xr.requestSession('immersive-vr')
-            //    .then(nkNavigator.GetOnSessionStarted)
-            //    .catch(err => { enterXrBtn.innerHTML += "<BR>" + err; });
-        };
+        enterXrBtn.addEventListener("pointerenter", () => { enterXrBtn.innerHTML = '<BR>Click here to enter VR (maybe?)'; });
+        enterXrBtn.addEventListener("pointerleave", () => { enterXrBtn.innerHTML = '<BR>Click here to enter VR'; });
+        enterXrBtn.addEventListener("pointerdown", () => {
+            nv.xr.requestSession('immersive-vr')
+                .then(nkNavigator.GetOnSessionStarted)
+                .catch(err => { enterXrBtn.innerHTML += "<BR>" + err; });
+        });
+        //enterXrBtn.addEventListener("click", () => { enterXrBtn.innerHTML += "lC"; });
+        //enterXrBtn.addEventListener("dblclick", () => { enterXrBtn.innerHTML += "lD"; });
+        //enterXrBtn.addEventListener("auxclick", () => { enterXrBtn.innerHTML += "lA"; });
+        //enterXrBtn.onpointerdown = function () {
+        //    enterXrBtn.innerHTML += ".";
+        //    nv.xr.requestSession('immersive-vr')
+        //        .then(nkNavigator.GetOnSessionStarted)
+        //        .catch(err => { enterXrBtn.innerHTML += "<BR>" + err; });
+        //};
         document.body.append(enterXrBtn);
         //enterXrBtn.onclick = function () {
 
