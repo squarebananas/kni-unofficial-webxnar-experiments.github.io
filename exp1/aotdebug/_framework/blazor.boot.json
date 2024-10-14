@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Game1",
   "resources": {
-    "hash": "sha256-xtyU9bk/UJABr5JBzimwQKtL82bak7LbssIKoEzGJEU=",
+    "hash": "sha256-E7gi+07XBnVpV1bOJUDPdrfZ44uZv701pTJmZqgayik=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.pwyg3s6qry.js": "sha256-FOU726FsTWHdcgPDUggXHqgdKtQdyjj2+WFvMOmIJzo="
     },
@@ -9,7 +9,7 @@
       "dotnet.runtime.8.0.8.80cvijctdx.js": "sha256-0Dpj/NkVD5WqSC16ZvJLmlc38iv9+Je+umYBVOycPVU="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-/qVmxjU7TSOWg44uHgF1q9YjbbTA/dq0pRnXMiJBqcI="
+      "dotnet.native.wasm": "sha256-2lA3D5pf+OYuJUaV0Mt+ct+8IreFg00A7UY90g6W5+A="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "Game1.wasm": "sha256-c6l2Nbz2RXBIy6gh5hiUIpHusH0xLy8XNnAgDA5kol8=",
+      "Game1.wasm": "sha256-BtTDZ9VITCsAxL3HtxWad+9fkDUTAqUFsJF3teEG2gg=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-QsfGJEQlGgHDpRaJ4wPUfuf37Cc9GMX6wY4iVUc3VJU=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-eAD58WIY74jI8lOjIsnaDGrrlTJysrxqlXjXd/BRO1c=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-cjv0l2XLcfeTcLwHeVQeK+F20CSOw34aaTjOGlrKazc=",
