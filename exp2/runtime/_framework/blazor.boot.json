@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ShipGame",
   "resources": {
-    "hash": "sha256-KL0QVvMbON3l9APO9AZcNtq/z8spK8uERqmR5IOnmMQ=",
+    "hash": "sha256-H+/MCdurxbTouCatZFcLszez9tFJtfOnXDtpNpACKmc=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.mnvhvfmedy.js": "sha256-CC6791/fuN3JkEw/6qYCD2P3x6+3Eh6Vnu7XWsyxtMA="
     },
@@ -39,7 +39,7 @@
       "nkast.Wasm.Dom.wasm": "sha256-A++ITPQAvGwC5Aovooo8g4YIEWYKqCJB0esao7R2YiU=",
       "nkast.Wasm.XHR.wasm": "sha256-cHPM3mrx/wc1Lj3CoChDtOIDYYrjycEsE5RhyybNF1M=",
       "nkast.Wasm.XR.wasm": "sha256-ACyJf+zsL1FLHyO27MpiLvcvlf3byiPoYfMjf34ihAw=",
-      "ShipGame.wasm": "sha256-F+Z22FIKVie9MloGjiON8cSPQGqjR0h+HfAx+v8OaAs=",
+      "ShipGame.wasm": "sha256-YKSKzIVeWcKnrXYupJe7W/IBhtUwO/4drrY7/ucD9so=",
       "System.Collections.Concurrent.wasm": "sha256-ft/lYIGt6nAm32LtxUOlMJmDjZ7iXwEkdfTwU0WBj/w=",
       "System.Collections.NonGeneric.wasm": "sha256-z9o5NW6lQRKTZshyLDpAbdOYRk7N2ek+Q1vpdBLqoLI=",
       "System.Collections.Specialized.wasm": "sha256-PgcMLefOwJupq+K7hCnCJEMtUbLPhrdYHRI0L5nWjoE=",
